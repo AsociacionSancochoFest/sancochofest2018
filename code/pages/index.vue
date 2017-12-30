@@ -3,6 +3,8 @@
       <Menu/>
       <Home/>
       <LineUp/>
+      <History/>
+      <ArtistDetail/>
     </div>
 </template>
 
@@ -11,13 +13,17 @@ import Logo from '~/components/Logo.vue'
 import Home from '~/components/Home.vue'
 import Menu from '~/components/Menu.vue'
 import LineUp from '~/components/LineUp.vue'
+import History from '~/components/History.vue'
+import ArtistDetail from '~/components/ArtistDetail.vue'
 
 export default {
   components: {
     Logo,
     Home,
     Menu,
-    LineUp
+    LineUp,
+    History,
+    ArtistDetail
   }
 }
 </script>

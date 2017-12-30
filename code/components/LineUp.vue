@@ -1,13 +1,19 @@
 <template>
   <section class="section">
     <b-container>
-      <h1>LINE UP</h1>
+      <b-row justify-content-md-center>
+        <div class="col-md-auto">
+        <h2>
+          #LineUp
+        </h2>
+        </div>
+      </b-row>
       <b-row class="text-center">
         <b-col lg="12" md="12">
           <b-container>
-            <b-row>
-              <b-col lg="2" v-for="artist in AllLineUp" :key="artist.id">
-                <a class="artist-link" href="#">{{artist.nombre}}</a>
+            <b-row justify-content-md-center>
+              <b-col class="artist-link-container" lg="4" v-for="artist in AllLineUp" :key="artist.id">
+                <a @click="$store.commit('changueArtist', artist.id)" class="artist-link">{{artist.nombre}}</a>
               </b-col>
             </b-row>
           </b-container>
@@ -18,6 +24,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
   computed: {
     ...mapGetters([
@@ -27,10 +34,13 @@ export default {
 }
 </script>
 <style>
+.artist-link-container{
+    margin: 1.5em 0;
+}
 .section {
   width: 100%;
   background: #eee;
-  height: 100vh;
+  min-height: 100vh;
   border:0;
 }
 .artist-link{
