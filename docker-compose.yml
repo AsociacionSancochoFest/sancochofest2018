@@ -1,0 +1,36 @@
+version: '3.2'
+
+services:
+
+  frontend:
+    build: ./dockerfile
+    volumes:
+      - .:/frontend
+    ports:
+      - 3000:3000
+volumes:
+    frontend:
+
+
+#  drupal:
+#    image: drupal:8.2-apache
+#    links:
+#      - postgres:postgres
+#    ports:
+#      - 8080:80
+#    volumes:
+#      - ./backend/modules:/var/www/html/modules
+#      - ./backend/profiles:/var/www/html/profiles
+#      - ./backend/themes:/var/www/html/themes
+#      - ./backend/sites:/var/www/html/sites
+#    restart: always
+#
+#  postgres:
+#    image: postgres:9.6
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_PASSWORD: example
+#      POSTGRES_USER: postgres
+#      POSTGRES_DB: postgres
+#    restart: always
