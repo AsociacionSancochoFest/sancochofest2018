@@ -1,18 +1,18 @@
-#construir imagen
+## construir imagen
 ```
 sudo docker build -t frontend .
 ```
-#correr contenedor
+## correr contenedor
 ```
 sh start.sh
 ```
-#servidor
+## correr servidor
 ```
 cd code
 yarn run dev
 ```
 
-#primera ejecucion del contenedor
+## ejecutar en la primera ejecucion del contenedor
 ```
 yarn add package.json
 ```
