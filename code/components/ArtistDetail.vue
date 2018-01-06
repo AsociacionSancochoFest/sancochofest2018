@@ -1,26 +1,27 @@
 <template>
   <section class="artist-panel section" v-if="ActiveArtistId">
-    <b-container>
+    <b-container fluid>
       <b-row class="text-center">
-        <b-col class="artist-container-image" lg="6" md="12">
-          <div>
-            <img class="artist-image" src="http://placehold.it/500x500">/
-          </div>
-        </b-col>
         <b-col class="artist-info" lg="6" md="12">
-          <h1>LINE UP</h1>
+          <button @click="$store.commit('changueArtist', 0)" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <p>
-            <ul>
+            <h1 class="artist-name">{{ActiveArtist.nombre}}</h1>
               <li>{{ActiveArtistId}}</li>
-              <li>{{ActiveArtist.nombre}}</li>
+              <li></li>
               <li>{{ActiveArtist.origen}}</li>
               <li>{{ActiveArtist.genero}}</li>
               <li>f</li>
               <li>t</li>
               <li>i</li>
-              <li @click="$store.commit('changueArtist', 0)">CLOSE</li>
-            </ul>
+
           </p>
+        </b-col>
+        <b-col class="artist-container-image" lg="6" md="12">
+          <div>
+            <img class="artist-image" src="http://placehold.it/500x500">/
+          </div>
         </b-col>
       </b-row">
     </b-container>
@@ -42,7 +43,9 @@ export default {
 .artist-info{
   color: white;
 }
-
+.artist-name{
+  text-transform: uppercase;
+}
 .section {
   width: 100%;
   background: #eee;

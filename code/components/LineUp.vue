@@ -18,7 +18,7 @@
             </b-row>
           </b-container>
         </b-col>
-      </b-row">
+      </b-row>
     </b-container>
   </section>
 </template>
@@ -44,8 +44,8 @@ export default {
   border:0;
 }
 .artist-link{
-  font-size: 1.5em;
-
-  margin: 2em
+  font-size: 1.7em;
+  cursor: pointer !important;
+  text-transform: uppercase;
 }
 </style>

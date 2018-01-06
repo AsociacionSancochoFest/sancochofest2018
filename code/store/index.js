@@ -19,6 +19,24 @@ const state = {
     {id: 14, nombre: 'emci rrimas', origen: 'Cali', genero: 'Salsa', img: ''},
     {id: 15, nombre: 'juan pablo orozco ', origen: 'Cali', genero: 'Salsa', img: ''},
     {id: 16, nombre: 'joe taylor the fire band', origen: 'Cali', genero: 'Salsa', img: ''}
+  ],
+  editions: [
+    {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'},
+    {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'},
+    {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'}
+  ],
+  sponsors: [
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},
+    {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'}
   ]
 }
 
@@ -31,6 +49,14 @@ const mutations = {
 const getters = {
   AllLineUp: state => {
     return state.lineUp.map(x => x)
+  },
+
+  AllEditions: state => {
+    return state.editions.map(x => x)
+  },
+
+  AllSponsors: state => {
+    return state.sponsors.map(x => x)
   },
 
   ActiveArtistId: state => {

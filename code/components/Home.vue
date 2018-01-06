@@ -10,7 +10,7 @@
           <h4 id="banner" class="center-vertical">ENTRADA LIBRE</h4>
         </b-col>
         <b-col lg="6" md="6">
-          <img id="banner-img" class="center-vertical" src="http://placehold.it/500x500" alt="logo"/>
+          <img id="banner-img" class="center-vertical" src="http://placehold.it/500x600" alt="logo"/>
         </b-col>
       </b-row">
     </b-container>
@@ -34,6 +34,6 @@ export default {}
   top:50%;
 }
 #banner-img{
-  top:80%;
+  top:40%;
 }
 </style>

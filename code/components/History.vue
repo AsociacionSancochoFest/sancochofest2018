@@ -1,19 +1,10 @@
 <template>
   <section class="seccion">
     <b-container>
-      <b-row justify-content-md-center>
-        <div class="col-md-auto">
-        <h2>
-          #SancochosAnteriores
-        </h2>
-        </div>
-      </b-row>
-      <b-row justify-content-md-center>
-        <div class="col-md-auto">
-        </div>
-      </b-row>
-      <b-row class="text-center">
-        <b-row>
+      <h2>
+      #SancochosAnteriores
+      </h2>
+        <b-row v-for="edition in AllEditions" :key="edition.id">
           <b-col lg="6" md="6">
             <p>
               <h2>Sancocho 2017</h2>
@@ -25,12 +16,19 @@
             </div>
           </b-col>
         </b-row>
-      </b-row">
     </b-container>
   </section>
 </template>
 <script>
-export default {}
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters([
+      'AllEditions'
+    ])
+  }
+}
 </script>
 <style>
 </style>
