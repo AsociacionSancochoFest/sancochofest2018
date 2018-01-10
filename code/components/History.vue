@@ -1,7 +1,7 @@
 <template>
   <section class="seccion">
     <b-container>
-      <h2>
+      <h2 class="section-title">
       #SancochosAnteriores
       </h2>
         <b-row v-for="edition in AllEditions" :key="edition.id">
@@ -10,7 +10,7 @@
               <h2>Sancocho 2017</h2>
             </p>
           </b-col>
-          <b-col lg="6" md="6">
+          <b-col v-bind:class="[edition.id % 2 === 0 ?  'order-first' : '']" lg="6" md="6">
             <div class="embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
             </div>

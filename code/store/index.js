@@ -22,8 +22,8 @@ const state = {
   ],
   editions: [
     {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'},
-    {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'},
-    {id: 1, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'}
+    {id: 2, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'},
+    {id: 3, año: '2017', nombre: 'sancochofest 2017', edicion: 'I'}
   ],
   sponsors: [
     {id: 1, nombre: 'Centroaguas', img: 'https://placehold.it/100x100'},

@@ -2,8 +2,8 @@
   <section class="section">
     <b-container>
       <b-row justify-content-md-center>
-        <div class="col-md-auto">
-        <h2>
+        <div class="col align-self-center">
+        <h2 class="section-title">
           #LineUp
         </h2>
         </div>
@@ -34,6 +34,9 @@ export default {
 }
 </script>
 <style>
+.section-title{
+  padding: 2em 0;
+}
 .artist-link-container{
     margin: 1.5em 0;
 }

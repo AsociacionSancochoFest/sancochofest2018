@@ -1,7 +1,7 @@
 <template>
   <section class="seccion">
     <b-container>
-      <h2>
+      <h2 class="section-title">
       #Sponsors
       </h2>
       <b-row class="text-center">
