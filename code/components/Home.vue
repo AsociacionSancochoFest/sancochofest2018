@@ -1,16 +1,16 @@
 <template>
-  <section class="seccion">
+  <section id="home" class="seccion">
     <b-container>
-      <b-row class="text-center">
-        <b-col class="text-left float-left" lg="6" md="6">
-          <h5 id="banner" class="center-vertical">#VAMOSPALSANCOCHO</h5>
-          <h2 id="banner" class="center-vertical">SANCOCHO FEST 2018</h2>
-          <h3 id="banner" class="center-vertical">TULUA 1.2.3 DE FEBRERO 2018</h3>
-          <h5 id="banner" class="center-vertical">Festival Multiartistico y Multicultural comprometido con el medio ambiente</h5>
-          <h4 id="banner" class="center-vertical">ENTRADA LIBRE</h4>
-        </b-col>
+      <b-row class="align-items-center text-center">
         <b-col lg="6" md="6">
-          <img id="banner-img" class="center-vertical" src="http://placehold.it/500x600" alt="logo"/>
+        </b-col>
+        <b-col class="text-left" lg="6" md="6">
+          <div class="align-middle">
+            <h6>#VAMOSPALSANCOCHO</h6>
+            <h1>SANCOCHO FEST 2018</h1>
+            <h5>Festival Multiartistico y Multicultural comprometido con el medio ambiente,ESCUELA DEL SANCOCHO, TEATRO, MUSICA, BAZAR DE ARTISTAS</h5>
+            <h3>ENTRADA LIBRE Y GRATUITA</h3>
+          </div>
         </b-col>
       </b-row">
     </b-container>
@@ -20,20 +20,34 @@
 export default {}
 </script>
 <style>
+#home{
+  background: #4F309A !important;
+  color: #fff !important;
+  background-image: url('../assets/images/fondo.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: left;
+}
 .seccion{
   width: 100%;
-  background: #eee;
+  /*background: #eee;*/
   height: 100vh;
   border:0;
-  line-height: 200px;
 }
 .center-vertical{
   position: relative;
 }
 #banner{
-  top:50%;
+  bottom: 10%;
 }
-#banner-img{
-  top:40%;
+
+#home div {
+ height: 100%;
 }
+
+.align-middle{
+  position: relative;
+  top: 50%;
+}
+
 </style>

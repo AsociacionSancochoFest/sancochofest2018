@@ -38,6 +38,11 @@ html, body{
 }
 
 @font-face {
+      font-family: ComfortaaBold;
+    src: url(../static/Comfortaa-Bold.ttf);
+}
+
+@font-face {
     font-family: Comfortaa;
     src: url(../static/Comfortaa-Regular.ttf);
 }

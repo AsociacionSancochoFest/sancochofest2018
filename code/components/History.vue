@@ -6,9 +6,7 @@
       </h2>
         <b-row v-for="edition in AllEditions" :key="edition.id">
           <b-col lg="6" md="6">
-            <p>
-              <h2>Sancocho 2017</h2>
-            </p>
+              <h2><span class="align-middle">Sancocho 2017</span></h2>
           </b-col>
           <b-col v-bind:class="[edition.id % 2 === 0 ?  'order-first' : '']" lg="6" md="6">
             <div class="embed-responsive-16by9">

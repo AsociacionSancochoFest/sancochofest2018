@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section id="lineup" class="section">
     <b-container>
       <b-row justify-content-md-center>
         <div class="col align-self-center">
@@ -34,6 +34,11 @@ export default {
 }
 </script>
 <style>
+#lineup{
+  background: #00aba7;
+  color: #fff !important;
+
+}
 .section-title{
   padding: 2em 0;
 }
