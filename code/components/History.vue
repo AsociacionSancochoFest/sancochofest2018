@@ -2,7 +2,7 @@
   <section class="seccion">
     <b-container>
       <h2 class="section-title">
-      #SancochosAnteriores
+      Sancochos Anteriores
       </h2>
         <b-row v-for="edition in AllEditions" :key="edition.id">
           <b-col lg="6" md="6">

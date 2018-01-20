@@ -2,7 +2,7 @@
   <section class="seccion">
     <b-container>
       <h2 class="section-title">
-      #Sponsors
+      Sponsors
       </h2>
       <b-row class="text-center">
         <b-col lg="12" md="12">

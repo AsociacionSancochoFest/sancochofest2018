@@ -1,10 +1,10 @@
 <template>
   <section id="lineup" class="section">
     <b-container>
-      <b-row justify-content-md-center>
+      <b-row>
         <div class="col align-self-center">
         <h2 class="section-title">
-          #LineUp
+          LineUp
         </h2>
         </div>
       </b-row>
@@ -40,7 +40,11 @@ export default {
 
 }
 .section-title{
+  font-size: 2.6em;
   padding: 2em 0;
+  margin: 0 auto !important;
+  text-align: center;
+  text-transform: uppercase;
 }
 .artist-link-container{
     margin: 1.5em 0;
@@ -55,5 +59,6 @@ export default {
   font-size: 1.7em;
   cursor: pointer !important;
   text-transform: uppercase;
+  /*color: #f8e71ce6 !important;*/
 }
 </style>

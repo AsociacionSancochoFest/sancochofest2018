@@ -47,7 +47,7 @@ export default {}
 
 .align-middle{
   position: relative;
-  top: 50%;
+  top: 40%;
 }
 
 </style>

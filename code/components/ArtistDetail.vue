@@ -9,11 +9,8 @@
             </span>-->
             <div class="container artist-container-info align-middle">
               <h1 class="artist-name">{{ActiveArtist.nombre}}</h1>
-              <p class="artist-description">LOPWOPEORPOEPROPEORPEOPROEPORPEORPEOPROEPORPEOPROEPORPEO
-                ewperpwierpwiproiwpeoripoweirpowieproipwierpwoier
-                woeripwoeirpowierpowieproiwpeoripwoeirpowieporiw
-                eproiwpeoriwpoeirpwoeirpwoeirpoi
-
+              <p class="artist-description">
+                {{ActiveArtist.resena}}
               </p>
                 <table class="no-borders table">
                   <tbody>
@@ -32,7 +29,9 @@
           </b-col>
           <b-col class="artist-container-image" lg="6" md="12">
             <div class="cover">
-              <b-img class="artist-image" fluid src="http://placehold.it/500x500"/>
+              <figure class="filter">
+                <img class="artist-image fluid" :src="url(ActiveArtist.img)"/>
+              </figure>
             </div>
           </b-col>
         </b-row">
@@ -49,6 +48,11 @@ export default {
       'ActiveArtistId',
       'ActiveArtist'
     ])
+  },
+  methods: {
+    url: (file) => {
+      return '/images/' + file + '.jpg'
+    }
   }
 }
 </script>
@@ -70,11 +74,12 @@ export default {
   top:30% !important;
 }
 .artist-info{
-
   display: grid;
-  color: #000;
-display: grid;
-background: #f8e71ce6;
+  /*color: #000;*/
+  display: grid;
+  /*background: #f8e71ce6;*/
+  background: #00aba7;
+  color: #fff !important;
 }
 .artist-name{
   text-transform: uppercase;
@@ -95,6 +100,10 @@ background: #f8e71ce6;
 .artist-container-image{
   overflow: hidden;
 }
+
+.artist-container-image figure{
+  height: 100%;
+}
 .artist-image{
   height: 100%;
   width: 100%;
@@ -111,5 +120,24 @@ object-fit: cover;
 }
 .full-height{
   height: 100% !important;
+}
+
+.filter {
+  position: relative;
+  -webkit-filter: contrast(109%) brightness(67%) saturate(118%);
+  filter: contrast(109%) brightness(67%) saturate(118%);
+}
+.filter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  background: -webkit-linear-gradient(to bottom, rgba(178, 169, 0, 0.9019607843137255) 100, rgba(79, 48, 154, 1));
+  background: linear-gradient(to bottom, rgba(178, 169, 0, 0.9019607843137255) 100, rgba(79, 48, 154, 1));
 }
 </style>
