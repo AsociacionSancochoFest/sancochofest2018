@@ -12,7 +12,7 @@
         <b-col lg="12" md="12">
           <b-container>
             <b-row justify-content-md-center>
-              <b-col class="artist-link-container" lg="4" v-for="artist in AllLineUp" :key="artist.id">
+              <b-col class="artist-link-container" lg="4" sm="12" v-for="artist in AllLineUp" :key="artist.id">
                 <a @click="$store.commit('changueArtist', artist.id)" class="artist-link">{{artist.nombre}}</a>
               </b-col>
             </b-row>
@@ -37,10 +37,12 @@ export default {
 #lineup{
   background: #00aba7;
   color: #fff !important;
+  height: auto !important;
+  padding-bottom: 4em;
 
 }
 .section-title{
-  font-size: 2.6em;
+  font-size: 3.2em;
   padding: 2em 0;
   margin: 0 auto !important;
   text-align: center;
@@ -55,10 +57,23 @@ export default {
   min-height: 100vh;
   border:0;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .section {
+      height: auto !important;
+    }
+}
+
+
 .artist-link{
   font-size: 1.7em;
   cursor: pointer !important;
   text-transform: uppercase;
-  /*color: #f8e71ce6 !important;*/
+  transition: all .5s;
+  cursor: pointer;
+}
+.artist-link:hover{
+  color: #f8e71ce6 !important;
 }
 </style>

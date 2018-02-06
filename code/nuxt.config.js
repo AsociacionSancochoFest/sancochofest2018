@@ -13,6 +13,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: ['~/plugins/vue-google-maps'],
   modules: [
     'bootstrap-vue/nuxt',
 
